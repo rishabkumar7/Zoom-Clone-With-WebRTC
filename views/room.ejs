@@ -16,8 +16,33 @@
   <title>Mooz</title>
   <style>
     body {
-      background-image: url('example_img_girl.jpg');
+      width: 100%;
+      align-items: center;
+      height: 100%;
+
+
+      /* Background image is centered vertically and horizontally at all times */
+      background-position: center center;
+
+      /* Background image doesn't tile */
       background-repeat: no-repeat;
+
+      /* Background image is fixed in the viewport so that it doesn't move when 
+        the content's height is greater than the image's height */
+      background-attachment: fixed;
+
+      /* This is what makes the background image rescale based
+        on the container's size */
+      background-size: cover;
+
+      /* Set a background color that will be displayed
+        while the background image is loading */
+      background-color: green;
+      overflow: hidden;
+
+      /* Location of the image */
+      background-image: url('https://media0.giphy.com/media/1BfRG8cK5SPOer97aK/giphy.gif?cid=ecf05e47yt0vz0bu9a3rvjnufn2wfqw16xayh2ytggulpeqp&rid=giphy.gif');
+
       font-family: 'Roboto Condensed', sans-serif;
     }
 
@@ -38,13 +63,14 @@
     h1 {
       text-align: center;
       font-size: 72px;
-      background: -webkit-linear-gradient(#00B0FF, #F50057);
+      background: -webkit-linear-gradient(#00B0FF, #FFFFFF);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     footer {
       text-align: center;
+      color: #FFFFFF;
     }
   </style>
 </head>

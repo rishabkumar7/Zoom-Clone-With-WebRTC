@@ -4,7 +4,7 @@ const app = express()
 const fs = require('fs')
 const https = require('https')
 const options = {
-  key:fs.readFileSync('server-key.pem'),
+  key: fs.readFileSync('server-key.pem'),
   cert: fs.readFileSync('server-cert.pem')
 }
 const httpsServer = https.createServer(options, app)
@@ -33,5 +33,5 @@ io.on('connection', socket => {
 })
 
 httpsServer.listen(443, function () {
-    console.log("Example app listening at https://%s:%s", httpsServer.address().address, httpsServer.address().port);
-  });
+  console.log("Example app listening at https://%s:%s", httpsServer.address().address, httpsServer.address().port);
+});
